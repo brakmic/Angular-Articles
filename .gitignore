@@ -31,3 +31,12 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+#vscode
+article1/.vscode/
+
+# project-generated map & js files 
+article1/app/**/*.js
+article1/app/**/*.js.map 
+article1/app/main.js
+**.js.map

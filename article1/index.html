@@ -1,0 +1,53 @@
+<html>
+
+  <head>
+    <title>Angular 2 - Northwind Demo</title>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="app/vendor/datatables/datatables.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="app/vendor/datatables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
+    
+    <script>
+      window.localStorage.debug = true; //important for logging with 'bows'
+      System.config({
+        defaultJSExtensions: true,
+        paths: {
+          '*': './node_modules/*',
+          'app/*': 'app/*',
+        },
+        map: {
+          rxjs: './node_modules/rxjs' 
+        },
+        packages: {
+          rxjs: {
+            defaultExtension: 'js'
+          }
+        },
+        packageConfigPaths: ['./node_modules/*/package.json'],
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+
+  </head>
+
+  <body>
+    <ang2-app><div class="loading-spinner">
+                    <div class="loading-text">Loading...</div>
+                    <img src="styles/images/loader.gif"/>
+               </div>
+    </ang2-app>
+  </body>
+
+</html>

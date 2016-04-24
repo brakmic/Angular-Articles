@@ -1,0 +1,36 @@
+{
+  "name": "angular2demo1",
+  "version": "0.0.1",
+  "description": "a simple angular2 demo app",
+  "scripts": {
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "typings": "typings",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "ntsc",
+    "tsc:w": "ntsc -w"
+  },
+  "author": "Harris Brakmic",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.2.0",
+    "ntypescript": "1.201604222248.1",
+    "typings": "^0.8.1"
+  },
+  "dependencies": {
+    "angular2": "^2.0.0-beta.15",
+    "bootstrap": "^3.3.6",
+    "bows": "^1.5.0",
+    "domready": "^1.0.8",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.35.0",
+    "jquery": "^2.2.3",
+    "random-js": "^1.0.8",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.2",
+    "systemjs": "^0.19.26",
+    "underscore": "^1.8.3",
+    "zone.js": "^0.6.10"
+  }
+}
