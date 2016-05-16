@@ -1,26 +1,71 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "outDir": "dist/app",
+    "target": "ES5",
     "module": "system",
-    "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "removeComments": false,
-    "noImplicitAny": false
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
   },
-  "exclude": [
-    "node_modules",
-    "typings/browser",
-    "typings/browser.d.ts"
-  ],
   "filesGlob": [
     "**/*.ts",
     "**/*.js",
+    "typings/**/*.d.ts",
     "!node_modules/**",
     "!jspm_packages/**",
     "!styles/**",
     "!test/**",
     "!**/vendor/**"
-  ]
+  ],
+  "files": [
+    "app/components/app.component.ts",
+    "app/components/table.component.ts",
+    "app/interfaces/ICustomer.ts",
+    "app/interfaces/ICustomerSelectedEvent.ts",
+    "app/main.ts",
+    "app/services/NorthwindService.ts",
+    "Gulpfile.ts",
+    "typings/browser.d.ts",
+    "typings/browser/ambient/es6-shim/index.d.ts",
+    "typings/browser/ambient/jquery.dataTables/jquery.dataTables-1.9.14.d.ts",
+    "typings/browser/ambient/jquery.dataTables/jquery.dataTables.d.ts",
+    "typings/browser/ambient/jquery/index.d.ts",
+    "typings/browser/ambient/node/index.d.ts",
+    "typings/extensions/own.d.ts",
+    "typings/main.d.ts",
+    "typings/main/ambient/es6-shim/index.d.ts",
+    "typings/main/ambient/jquery.dataTables/jquery.dataTables-1.9.14.d.ts",
+    "typings/main/ambient/jquery.dataTables/jquery.dataTables.d.ts",
+    "typings/main/ambient/jquery/index.d.ts",
+    "typings/main/ambient/node/index.d.ts",
+    "app/components/app.component.js",
+    "app/components/table.component.js",
+    "dist/app/components/app.component.js",
+    "dist/app/components/table.component.js",
+    "dist/app/interfaces/ICustomer.js",
+    "dist/app/interfaces/ICustomerSelectedEvent.js",
+    "dist/app/main.js",
+    "dist/app/services/NorthwindService.js",
+    "dist/lib/angular2-polyfills.js",
+    "dist/lib/angular2.dev.js",
+    "dist/lib/bows.min.js",
+    "dist/lib/datatables.min.js",
+    "dist/lib/http.dev.js",
+    "dist/lib/jquery.min.js",
+    "dist/lib/random.min.js",
+    "dist/lib/ready.min.js",
+    "dist/lib/router.dev.js",
+    "dist/lib/Rx.js",
+    "dist/lib/system.src.js",
+    "dist/styles/bootstrap/js/bootstrap.js",
+    "dist/styles/bootstrap/js/bootstrap.min.js",
+    "dist/styles/bootstrap/js/npm.js"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

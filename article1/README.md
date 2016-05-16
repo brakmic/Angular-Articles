@@ -1,12 +1,24 @@
-#### Installation
+#### Package Installation
 
 ```
 npm install
 ```
 
-#### Running
+#### Running in a test environment (lite-server)
 
 ```
 npm start
+```
+
+#### Building
+
+```
+gulp build
+```
+
+#### Linting
+
+```
+gulp lint
 ```
 

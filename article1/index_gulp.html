@@ -1,0 +1,46 @@
+<html>
+
+  <head>
+    <title>Angular 2 - Northwind Demo</title>
+    <script src="lib/angular2-polyfills.js"></script>
+    <script src="lib/system.src.js"></script>
+    <script src="lib/Rx.js"></script>
+    <script src="lib/angular2.dev.js"></script>
+    <script src="lib/http.dev.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/datatables.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="app/vendor/datatables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
+    
+    <script>
+      window.localStorage.debug = true; //important for logging with 'bows'
+      System.config({
+        packages: {
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          },
+        },
+        map: {
+          bows: 'lib/bows.min.js',
+          'random-js': 'lib/random.min.js',
+          domready: 'lib/ready.min.js'
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+
+  </head>
+
+  <body>
+    <ang2-app><div class="loading-spinner">
+                    <div class="loading-text">Loading...</div>
+                    <img src="styles/images/loader.gif"/>
+               </div>
+    </ang2-app>
+  </body>
+
+</html>

@@ -8,8 +8,6 @@
 // - Plugin and extension definitions are not typed.
 // - Some return types are not fully wokring
 
-/// <reference path="../jquery/index.d.ts"/>
-
 interface JQuery {
     DataTable(param?: DataTables.Settings): DataTables.DataTable;
 }
