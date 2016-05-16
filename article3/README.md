@@ -1,0 +1,29 @@
+### Emoji-Pipe Demo
+
+Angular2-rc1 environment based on:
+
+* [Angular 2 WebPack Starter](https://github.com/AngularClass/angular2-webpack-starter)
+* [Gemoji - JSON data](https://github.com/github/gemoji)
+
+##### Article on Angular 2 Pipes
+
+[Link](http://blog.brakmic.com/introduction-to-angular-2-part-3/)
+
+##### Installation
+
+```
+npm install
+```
+
+##### Running with Hot-Module-Reloading
+
+```
+
+Open your browser at: [http://localhost:3000](http://localhost:3000)
+
+npm run start:hmr
+```
+
+##### LICENSE
+
+MIT
