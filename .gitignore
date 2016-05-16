@@ -41,4 +41,3 @@ article1/app/**/*.js.map
 article1/app/main.js
 **.js.map
 article1/dist/
-article3/dist
