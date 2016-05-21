@@ -1,5 +1,9 @@
 ### Emoji-Pipe Demo
 
+![EmojiDemo](http://fs5.directupload.net/images/160521/nqhzt3gb.png)
+
+[Demo Website](http://brakmic.com/demos/emoji/)
+
 Angular2-rc1 environment based on:
 
 * [Angular 2 WebPack Starter](https://github.com/AngularClass/angular2-webpack-starter)
