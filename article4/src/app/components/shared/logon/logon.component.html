@@ -1,0 +1,22 @@
+<div class="logon-box default-background centered responsive">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <form id="logonForm" [ngFormModel]="logonForm" role="form" (submit)="logon($event, username.value, password.value)">
+      <div class="form-group input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input class="form-control" type="text" #username ngControl="username" id="username" name='username' placeholder="User Name">
+      </div>
+      <div class="form-group input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input class="form-control" #password ngControl="password" type="password" id="password" name='password' placeholder="Password">
+      </div>
+      <div class="form-group">
+        <div class="iconrow">
+        <button type="submit" [disabled]="!logonForm.valid" class="btn btn-default btn-block">
+            <i class="icon-custom-logo pull-left"></i>
+            <div class="iconlabel">Login</div>
+        </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noEmitHelpers": true
+  },
+  "exclude": [
+    "node_modules",
+    "typings/main.d.ts",
+    "typings/main"
+  ],
+  "filesGlob": [
+    "./src/**/*.ts",
+    "!./src/**/*.spec.ts",
+    "./node_modules/rxjs/**/*.d.ts",
+    "./src/platform/**/*.ts",
+    "!./node_modules/**",
+    "!./src/e2e-tests/**",
+    "./src/custom-typings.d.ts",
+    "./typings/**/*.ts",
+    "./typings/index.d.ts"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "resolveGlobs": true,
+    "forkChecker": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "files": [
+    "./src/app/components/app.component.ts",
+    "./src/app/components/index.ts",
+    "./src/app/components/shared/index.ts",
+    "./src/app/components/shared/logon/index.ts",
+    "./src/app/components/shared/logon/logon.component.ts",
+    "./src/app/index.ts",
+    "./src/app/interfaces/declarations/ILogonData.ts",
+    "./src/app/interfaces/declarations/IUser.ts",
+    "./src/app/interfaces/index.ts",
+    "./src/app/services/index.ts",
+    "./src/app/services/logon/index.ts",
+    "./src/app/services/logon/logon.service.ts",
+    "./src/custom-typings.d.ts",
+    "./src/main.browser.ts",
+    "./src/platform/browser/directives.ts",
+    "./src/platform/browser/index.ts",
+    "./src/platform/browser/pipes.ts",
+    "./src/platform/browser/providers.ts",
+    "./src/platform/environment.ts",
+    "./src/polyfills.ts",
+    "./src/vendor.ts",
+    "./typings/browser.d.ts",
+    "./typings/globals/core-js/index.d.ts",
+    "./typings/globals/immutable/immutable.d.ts",
+    "./typings/globals/jquery/jquery.d.ts",
+    "./typings/globals/lodash/index.d.ts",
+    "./typings/globals/node/index.d.ts",
+    "./typings/globals/source-map/index.d.ts",
+    "./typings/globals/uglify-js/index.d.ts",
+    "./typings/globals/webpack/index.d.ts",
+    "./typings/index.d.ts",
+    "./typings/main.d.ts"
+  ]
+}

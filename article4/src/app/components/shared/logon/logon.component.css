@@ -1,0 +1,30 @@
+.logon-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:400px;
+  height:220px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border:3px solid #FFFFFF;
+  background:rgba(37,149,235,0.8);
+}
+
+.centered {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.centered.responsive {
+  width: 50%;
+  height: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 200px;
+  padding: 40px;
+}
