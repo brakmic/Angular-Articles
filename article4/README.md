@@ -1,5 +1,7 @@
 #### Logon Demo
 
+[Live Demo](http://brakmic.com/demos/logon/)
+
 ##### Install
 
 ```shell
