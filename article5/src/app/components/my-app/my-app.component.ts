@@ -20,9 +20,10 @@ export class MyAppComponent implements OnInit {
     public ngOnInit() {
         this.initWebWorker();
     }
-
+    /*
+    * Activate WebWorker which resides in a separate JS file
+    */
     private initWebWorker() {
-        // activate WebWorker which resides in a separate JS file in www-root dir
         this.worker = new Worker('worker.js');
         // `on-message` callback to receive data from worker
         this.worker.addEventListener('message', (e: MessageEvent) => {
@@ -31,12 +32,15 @@ export class MyAppComponent implements OnInit {
           this.cd.markForCheck();
         });
     }
-
-    private getCustomers($event) {
-        // post a command to the worker
+    /*
+    * Post a command to the worker
+    */
+    private onGetCustomersClicked($event) {
         this.worker.postMessage({ table: 'Customers'});
     }
-
+    /*
+    * React to row selections
+    */
     private onRowSelected($event: { row: any }) {
         this.lastEntry = `${$event.row.ContactName} selected`;
     }
