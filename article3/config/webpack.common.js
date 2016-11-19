@@ -1,7 +1,3 @@
-/**
- * @author: advarics GmbH
- */
-
 const year = (new Date).getFullYear();
 
 const webpack = require('webpack');
