@@ -10,7 +10,6 @@ import 'rxjs/add/observable/from';
 import 'circular-json';
 
 import { Observable } from 'rxjs/Observable';
-import * as _ from 'lodash';
 import * as odata from 'odata';
 
 const _url = `http://services.odata.org/V4/Northwind/Northwind.svc/`;
