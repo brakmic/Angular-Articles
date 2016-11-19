@@ -1,8 +1,6 @@
 import { Component,
          OnInit, ChangeDetectorRef,
          ChangeDetectionStrategy } from '@angular/core';
-import * as _ from 'lodash';
-const domready = require('domready');
 
 @Component({
     selector: 'my-app',
