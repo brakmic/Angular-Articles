@@ -42,3 +42,5 @@ article1/app/main.js
 **.js.map
 article1/dist/
 article4/dist/
+
+dist/
