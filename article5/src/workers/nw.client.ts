@@ -21,7 +21,7 @@ export class NwClient {
         this.setupOData();
     }
     /**
-     * Asynchronously excetue an OData query 
+     * Asynchronously execute an OData query 
      * @returns {Observable<ISupplier>} Returns an Observable 
      */
     public get(table: string): Observable<{ data: any }> {
