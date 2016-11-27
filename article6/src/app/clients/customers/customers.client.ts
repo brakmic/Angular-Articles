@@ -18,7 +18,7 @@ export class CustomersClient {
     constructor(private url: string = _url) {
     }
     /**
-     * Asynchronously execute an OData query 
+     * Return customers list
      * @returns {Observable<JSON>} Returns an Observable<JSON> 
      */
     public getCustomers(): Observable<JSON> {
