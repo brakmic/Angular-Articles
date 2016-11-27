@@ -23,7 +23,7 @@ when developing the app with hot-module reloading.
 Use 
 
 ```
-npm run start:hmr 
+npm run build:dev 
 ```
 
 respective
