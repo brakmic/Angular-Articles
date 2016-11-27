@@ -10,7 +10,7 @@ import 'rxjs/add/observable/from';
 import 'circular-json';
 
 import { Observable } from 'rxjs/Observable';
-import * as odata from 'odata';
+
 
 const _url = `https://brakmic.github.io/sw-demo/assets/data/customers.json`;
 
@@ -19,7 +19,7 @@ export class CustomersClient {
     }
     /**
      * Asynchronously execute an OData query 
-     * @returns {Observable<ISupplier>} Returns an Observable 
+     * @returns {Observable<JSON>} Returns an Observable<JSON> 
      */
     public getCustomers(): Observable<JSON> {
        return Observable.fromPromise(self.fetch(this.url)
