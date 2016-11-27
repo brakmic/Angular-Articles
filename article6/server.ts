@@ -7,7 +7,7 @@ import * as _ from 'lodash';
 class Server {
     public static init(): Hapi.Server {
 
-        const tls = {
+        const tls = { // you must provide your own keys!!!
                      key: fs.readFileSync('src/assets/openssl/server.key'),
                      cert: fs.readFileSync('src/assets/openssl/server.crt'),
                      ca: fs.readFileSync('src/assets/openssl/ca.crt'),

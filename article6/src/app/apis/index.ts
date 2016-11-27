@@ -1,1 +1,0 @@
-export { northwindApi } from './northwind';

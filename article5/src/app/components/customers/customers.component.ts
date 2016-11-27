@@ -4,7 +4,6 @@ import { Component,
          ChangeDetectionStrategy,
          SimpleChanges, EventEmitter } from '@angular/core';
 import * as _ from 'lodash';
-const domready = require('domready');
 
 @Component({
     selector: 'customers',

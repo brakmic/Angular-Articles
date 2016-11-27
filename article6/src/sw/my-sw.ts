@@ -10,7 +10,8 @@ const urlsToCache = [
   'polyfills.bundle.js',
   'vendor.bundle.js'
 ];
-
+// Install Event
+// Here we cache our static assets from the above array
 self.addEventListener('install', (e: ExtendableEvent) => {
     logger.log(`Installation.`);
     e.waitUntil(
@@ -20,7 +21,8 @@ self.addEventListener('install', (e: ExtendableEvent) => {
             }));
 });
 
-// The activate handler takes care of cleaning up old caches.
+// Activat Event
+// Here we cleanup the caches
 self.addEventListener('activate', (e: ExtendableEvent) => {
   const currentCaches = [LOCAL_CACHE, RUNTIME_CACHE];
   logger.log(`Activation.`);
@@ -35,12 +37,15 @@ self.addEventListener('activate', (e: ExtendableEvent) => {
   );
 });
 
-// The fetch handler serves responses for same-origin resources from a cache.
-// If no response is found, it populates the RUNTIME_CACHE cache with the response
-// from the network before returning it to the pag.e.
+// Fetch Events
+// Here we take care of fetch-events and serve cached data for responses we know about.
+// If a response _from the network_ isn't in our cache we'll cache it immediately 
+// in the RUNTIME_CACHE and then return the response.
+// The difference between LOCAL_CACHE and RUNTIME_CACHE is that our local cache 
+// only contains our static assets while RUNTIME_CACHE contains network responses.
 self.addEventListener('fetch', (e: FetchEvent) => {
   logger.log(`Intercepted fetch request: ${e.request.url}`);
-  // Skip cross-origin requests, like those for Google Analytics.
+  // Ignore any cross-origin requests
   if (e.request.url.startsWith(self.location.origin)) {
     e.respondWith(
       self.caches.match(e.request).then(cachedResponse => {
@@ -51,7 +56,7 @@ self.addEventListener('fetch', (e: FetchEvent) => {
 
         return self.caches.open(RUNTIME_CACHE).then(cache => {
           return self.fetch(e.request.clone()).then(response => {
-            // Put a copy of the response in the RUNTIME_CACHE cache.
+            // Put a copy of the response in the RUNTIME_CACHE.
             return cache.put(e.request, response.clone()).then(() => {
               logger.log(`Caching & serving new response: ${response.url}`);
               return response;

@@ -39,8 +39,7 @@ article1/.vscode/
 article1/app/**/*.js
 article1/app/**/*.js.map 
 article1/app/main.js
-**.js.map
 article1/dist/
 article4/dist/
-
-dist/
+article5/dist/
+article6/src/assets/openssl

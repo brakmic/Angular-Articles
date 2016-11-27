@@ -1,1 +1,1 @@
-export * from './nw';
+export * from './customers';

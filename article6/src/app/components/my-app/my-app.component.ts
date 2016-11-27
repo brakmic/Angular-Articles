@@ -1,7 +1,7 @@
 import { Component,
          OnInit, ChangeDetectorRef,
          ChangeDetectionStrategy } from '@angular/core';
-import { NwClient } from 'app/clients';
+import { CustomersClient } from 'app/clients';
 import { ICustomerData } from 'app/interfaces';
 const logger = require('bows')('MyApp');
 
@@ -16,7 +16,7 @@ export class MyAppComponent implements OnInit {
     private customersList: any[] = [];
     private customerData: ICustomerData;
     private digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    private client: NwClient;
+    private client: CustomersClient;
 
     constructor(private cd: ChangeDetectorRef) { }
 
@@ -35,16 +35,15 @@ export class MyAppComponent implements OnInit {
         });
     }
     private initStorageClient() {
-        this.client = new NwClient();
+        this.client = new CustomersClient();
     }
     /*
-    * Post a command to the worker
+    * Get customers data
     */
     private onGetCustomersClicked($event) {
-        this.client.get('Customers').subscribe(e => {
-            this.customersList = e.data;
+        this.client.getCustomers().subscribe(e => {
+            this.customersList = (<any>e).Customers;
             this.cd.markForCheck();
-            logger.log(`Got customers: ${e.data}`);
         });
     }
     /*
@@ -55,7 +54,7 @@ export class MyAppComponent implements OnInit {
         const picture = this.digits[Math.floor(Math.random() * this.digits.length)];
         const c = $event.row;
         this.customerData = {
-            picture: `https://localhost:8080/assets/images/${picture}.png`,
+            picture: `https://brakmic.github.io/sw-demo/assets/images/${picture}.png`,
             companyName: c.CompanyName,
             contactName: c.ContactName,
             phone: c.Phone,
