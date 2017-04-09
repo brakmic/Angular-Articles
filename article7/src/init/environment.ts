@@ -1,23 +1,15 @@
+/**
+ * @author: advarics GmbH
+ */
 // Angular 2
 // rc2 workaround
 import { enableDebugTools, disableDebugTools } from '@angular/platform-browser';
 import { enableProdMode, ApplicationRef } from '@angular/core';
-// Angular 2
-import { LocationStrategy, PathLocationStrategy } from '@angular/common';
-
-/*
-* Application Providers/Directives/Pipes
-* providers/directives/pipes that only live in our browser environment
-*/
-
-const APPLICATION_PROVIDERS = [
-  { provide: LocationStrategy, useClass: PathLocationStrategy }
-];
-
-
+import { BROWSER_PROVIDERS } from './browser';
+// Environment Providers
 let PROVIDERS: any[] = [
   // common env directives
-  ...APPLICATION_PROVIDERS
+  ...BROWSER_PROVIDERS
 ];
 
 // Angular debug tools in the dev console
@@ -26,8 +18,14 @@ let _decorateModuleRef = function identity<T>(value: T): T { return value; };
 
 if ('production' === ENV) {
   // Production
-  disableDebugTools();
   enableProdMode();
+
+  // Production
+  _decorateModuleRef = (modRef: any) => {
+    // disableDebugTools();
+
+    return modRef;
+  };
 
   PROVIDERS = [
     ...PROVIDERS
@@ -36,19 +34,19 @@ if ('production' === ENV) {
 
 } else {
 
-  _decorateModuleRef = (modRef: any) => {
+   _decorateModuleRef = (modRef: any) => {
     const appRef = modRef.injector.get(ApplicationRef);
     const cmpRef = appRef.components[0];
 
-    let _ng = (<any>window).ng;
+    let _ng = (<any> window).ng;
     enableDebugTools(cmpRef);
-    (<any>window).ng.probe = _ng.probe;
-    (<any>window).ng.coreTokens = _ng.coreTokens;
+    (<any> window).ng.probe = _ng.probe;
+    (<any> window).ng.coreTokens = _ng.coreTokens;
     return modRef;
   };
 
   // Development
-  PROVIDERS = [
+   PROVIDERS = [
     ...PROVIDERS
     // custom providers in development
   ];
