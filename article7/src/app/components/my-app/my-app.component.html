@@ -1,0 +1,15 @@
+<div class="customers-table container-fluid">
+    <div class="row">
+        <div class="col col-lg-10 col-md-8">
+            <customers [list]="customersList"></customers>
+        </div>
+        <div class="col col-lg-2 col-md-2">
+            <info [data]="customer | async"></info>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-lg-2">
+            <div id="get-customers" class="btn btn-primary" (click)="onGetCustomersClicked($event)">Get Customers</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Details</div>
+  <div class="panel-body">
+    <div *ngIf="data" class="card">
+      <img src="{{data.picture}}" alt="CustomerPhoto">
+      <div class="container">
+        <h4><b> {{data.contactName}} </b></h4> 
+        <p>{{data.contactTitle}}</p>
+        <p>Phone: {{data.phone}}</p> 
+        <p>Fax: {{data.fax}}</p> 
+        <p>Active Debt: ${{data.active_debt}}</p>
+      </div>
+    </div>
+  </div>
+</div>
