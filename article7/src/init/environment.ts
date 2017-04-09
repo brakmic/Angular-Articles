@@ -1,8 +1,3 @@
-/**
- * @author: advarics GmbH
- */
-// Angular 2
-// rc2 workaround
 import { enableDebugTools, disableDebugTools } from '@angular/platform-browser';
 import { enableProdMode, ApplicationRef } from '@angular/core';
 import { BROWSER_PROVIDERS } from './browser';

@@ -1,8 +1,6 @@
 /*
  * These are globally available services in any component or any other service
  */
-
-// Angular 2
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 /*
