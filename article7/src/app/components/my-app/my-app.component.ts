@@ -29,7 +29,7 @@ export class MyAppComponent implements OnInit,
 
     public ngOnInit() {
         this.initStorageClient();
-        this.initSubscriptions();
+        this.getCustomerObservable();
     }
 
     public ngOnDestroy() {
@@ -46,7 +46,7 @@ export class MyAppComponent implements OnInit,
         });
     }
 
-    private initSubscriptions() {
+    private getCustomerObservable() {
         this.customer = getCustomer(this.store);
     }
 }
