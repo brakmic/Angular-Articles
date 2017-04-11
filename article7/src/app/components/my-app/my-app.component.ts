@@ -49,14 +49,6 @@ export class MyAppComponent implements OnInit,
 
     private initSubscriptions() {
         this.customer = getCustomer(this.store);
-        // this.customer = selectedCustomer;
-        // logger.log(`[APP]::Customer::Selected::${JSON.stringify(this.customer)}`);
-        // if (this.customer) {
-        //     const picture = this.digits[Math.floor(Math.random() * this.digits.length)];
-        //     this.customer.picture = `https://brakmic.github.io/sw-demo/assets/images/${picture}.png`;
-        // }
-        // this.cd.markForCheck();
-       
     }
 
     private destroySubscriptions() {
