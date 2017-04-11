@@ -33,7 +33,6 @@ export class MyAppComponent implements OnInit,
     }
 
     public ngOnDestroy() {
-        this.destroySubscriptions();
     }
 
     private initStorageClient() {
@@ -49,11 +48,5 @@ export class MyAppComponent implements OnInit,
 
     private initSubscriptions() {
         this.customer = getCustomer(this.store);
-    }
-
-    private destroySubscriptions() {
-        if (this.customerSubscription) {
-            this.customerSubscription.unsubscribe();
-        }
     }
 }
