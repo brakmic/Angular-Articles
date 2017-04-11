@@ -53,14 +53,14 @@ export class CustomerChangedAction implements Action {
 }
 
 export class CustomerDeletedAction implements Action {
-  type = CustomerActionTypes.CHANGED;
+  type = CustomerActionTypes.DELETED;
   payload: string = null;
 
   constructor() { }
 }
 
 export class CustomerSavedAction implements Action {
-  type = CustomerActionTypes.CHANGED;
+  type = CustomerActionTypes.SAVED;
 
   constructor(public payload: ICustomer) { }
 }
