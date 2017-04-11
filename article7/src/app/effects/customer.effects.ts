@@ -34,4 +34,3 @@ export class CustomerEffects {
     private imageService: ImageService) { }
 
 }
-//this.paymentService.checkPayments(action.payload)
