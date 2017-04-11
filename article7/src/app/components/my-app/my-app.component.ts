@@ -48,5 +48,8 @@ export class MyAppComponent implements OnInit,
 
     private getCustomerObservable() {
         this.customer = getCustomer(this.store);
+        // this.store.select(appState => appState.customerState).subscribe(subState => {
+        //     const customerInstance = subState.customer;
+        // });
     }
 }
