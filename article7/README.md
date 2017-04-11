@@ -2,6 +2,8 @@
 
 [Go to the Article](https://blog.brakmic.com/reactive-apps-with-angular-ngrx/)
 
+[Visit the Live Demo](https://brakmic.github.io/ngrx-demo/)
+
 ## Building the app
 
 First, install packages with
