@@ -25,7 +25,7 @@ export const CustomerActionTypes: ICustomerActions = {
 
 export class InitCustomerAction implements Action {
   type = CustomerActionTypes.INIT;
-  payload: string = null;
+  payload: ICustomer = null;
 }
 
 export class InitializedCustomerAction implements Action {
@@ -36,7 +36,7 @@ export class InitializedCustomerAction implements Action {
 
 export class InitFailedCustomerAction implements Action {
   type = CustomerActionTypes.INIT_FAILED;
-  payload: string = null;
+  payload: ICustomer = null;
 }
 
 export class CustomerSelectedAction implements Action {
@@ -47,14 +47,14 @@ export class CustomerSelectedAction implements Action {
 
 export class CustomerChangedAction implements Action {
   type = CustomerActionTypes.CHANGED;
-  payload: string = null;
+  payload: ICustomer = null;
 
   constructor() { }
 }
 
 export class CustomerDeletedAction implements Action {
   type = CustomerActionTypes.DELETED;
-  payload: string = null;
+  payload: ICustomer = null;
 
   constructor() { }
 }
